@@ -1,3 +1,4 @@
+// based on http://www.mojowill.com/developer/using-the-new-wordpress-3-5-media-manager-in-your-plugin-or-theme/
 //requires Jquery
 var wp__media = ( function($){
 	var m;
