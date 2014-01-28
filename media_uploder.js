@@ -33,7 +33,10 @@ var wp__media = ( function($){
 			m.on('select', function(){
 				var media_attch = m.state().get('selection').toJSON();
 				
-				wp__media._func(p.func , media_attch , el );//we send it to the _add where 
+				wp__media._func(p.func , media_attch , el );
+				//we send it to _func where it runs your custom function
+				// selector is passed
+				// media object is passed = media_attch
 				
 			});
 
