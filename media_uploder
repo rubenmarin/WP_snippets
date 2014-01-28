@@ -1,3 +1,4 @@
+//requires Jquery
 var wp__media = ( function($){
 	var m;
 	var op = {
@@ -6,7 +7,7 @@ var wp__media = ( function($){
 		library : '',//empty for all types || images only library : { type : 'image'}
 	};
 	return {
-			// o = object/element 
+			// el = object/element 
 			// p = params
 		mu : function( el , p){
 			// If the frame already exists, re-open it.
