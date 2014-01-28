@@ -3,7 +3,10 @@ WP_snippets
 
 
 for media_upload
+```
 //JS
+
+
 	$(document).on( 'click' , 'input.button' , function (e){
 		var self = $(this);
 		wp__media.mu( self , 
@@ -18,3 +21,4 @@ for media_upload
 			},
 		});
 	});	
+```
