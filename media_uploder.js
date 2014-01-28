@@ -7,13 +7,15 @@ var wp__media = ( function($){
 		multiple : true,
 		library : '',//empty for all types || images only library : { type : 'image'}
 	};
+	var selector = '';//
 	return {
 			// el = object/element 
 			// p = params
 		mu : function( el , p){
+			selector = el;
 			// If the frame already exists, re-open it.
 			var p =  $.extend({}, op, p);//combine op/p
-
+			
 			if ( m ) {
 				m.open();
 				return;
@@ -33,7 +35,7 @@ var wp__media = ( function($){
 			m.on('select', function(){
 				var media_attch = m.state().get('selection').toJSON();
 				
-				wp__media._func(p.func , media_attch , el );
+				wp__media._func(p.func , media_attch , selector);
 				//we send it to _func where it runs your custom function
 				// selector is passed
 				// media object is passed = media_attch
@@ -43,9 +45,10 @@ var wp__media = ( function($){
 			m.open();
 
 		},
-		_func : function(f , m , e){
+		_func : function(f , m , s ){
 			t = this;
-			f.apply(t , [m , e]);
+			f.apply(t , [m , s]);
+
 		},
 
 	};
