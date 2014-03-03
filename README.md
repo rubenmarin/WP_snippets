@@ -27,7 +27,7 @@ using the media_upload.js
 
 using the winresize.cycle.js
 
-slector : value must be string. selector separated by comma [example]  selector : '#slideshow , #slideshow1 , #newsfeed'
+selector : value must be string. selector separated by comma [example]  selector : '#slideshow , #slideshow1 , #newsfeed'
 ```javascript
 //JS
 
