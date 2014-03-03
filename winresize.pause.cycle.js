@@ -1,10 +1,11 @@
 (function(){
 	this.cyclePS = ( function($){ 
 		var _opts;
-		var _width;
+		var _console = '[cycle-pause:listening]';		
 		function cyclePS (settings){
 			cyclePS.opts(settings);
-			cyclePS.init();	
+			cyclePS.init();
+			console.log(_console);	
 		}
 		cyclePS.init = function(){
 			cyclePS.resize();
@@ -20,7 +21,6 @@
 		};
 		
 		cyclePS.pause = function(){
-			console.log('ok!');
 			var width = window.innerWidth;	
 			opts = this._opts;
 			if( opts.selector != ''){
@@ -42,7 +42,6 @@
 		cyclePS.deploy = function(){
 			cyclePS.pause();	
 		};
-
 		return cyclePS;	
 	})(jQuery);
 }).call(this);
