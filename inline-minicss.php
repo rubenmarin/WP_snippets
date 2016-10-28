@@ -28,10 +28,17 @@ class cssMini{
 		if(file_exists( $filePath )):
 
 			// check if your mini/path is writable
-			$miniFileName = $file;
+			$__DIR = $OPTIONS['fileuri'];
+			$__DIR = explode('/',$__DIR);
+			$__DIR = array_reverse($__DIR);
+			$__DIR = $__DIR[0];
+			
+			$miniFileName = "{$__DIR}/{$file}";
+			//$miniFileName = $file;
+			
 			if( preg_match('/\//', $miniFileName ) ):
 				if( preg_match('/\//', $miniFileName ) ):
-					$miniFileName = preg_replace('/\//', '%', $file);
+					$miniFileName = preg_replace('/\//', '%', $miniFileName);
 				endif;
 			endif;
 
@@ -40,7 +47,7 @@ class cssMini{
 			if($miniDir != false):
 				
 				$OPTIONS['minifilepath'] = $miniDir . $miniFileName;
-
+				//echo $OPTIONS['minifilepath'];
 				if(!file_exists($OPTIONS['minifilepath']) || filemtime($filePath) > filemtime($OPTIONS['minifilepath'])):
 
 					$miniFilePath = static::writeFile( $filePath , $OPTIONS);
