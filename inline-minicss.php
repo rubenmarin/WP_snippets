@@ -1,11 +1,11 @@
 <?php
 /*
 Examples :
-cssMini::file('style.css');
-cssMini::file('assets/css/some.css');
-cssMini::url('http://some.google.font.com');
+miniCSS::file('style.css');
+miniCSS::file('assets/css/some.css');
+miniCSS::url('http://some.google.font.com');
 */
-class cssMini{
+class miniCSS{
 	
 	public static $fileDirectory;
 
